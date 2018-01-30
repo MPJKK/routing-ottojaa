@@ -10,6 +10,7 @@ import {DigitransitService} from './services/digitransit.service';
 import {FormsModule} from '@angular/forms';
 import {TopBarComponent} from './top-bar/top-bar.component';
 import {AgmCoreModule} from '@agm/core';
+import { RouteDirectionPipe } from './pipes/route-direction.pipe';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import {AgmCoreModule} from '@agm/core';
         TopBarComponent,
         SetupComponent,
         RoutesComponent,
+        RouteDirectionPipe,
     ],
     imports: [
         BrowserModule,
