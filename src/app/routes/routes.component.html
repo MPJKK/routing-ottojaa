@@ -1,20 +1,22 @@
 <body>
 <article *ngFor="let pysakki of reitit">
-    <h1>
-        {{ pysakki.name }}
-    </h1>
-
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h1>
+                    {{ pysakki.name }} {{pysakki.code}}
+                </h1>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
     <div fxLayout="row">
         <div fxFlex="30">
-            <ul>
-                <span *ngFor="let reitti of pysakki.patterns">
-                    <mat-divider [vertical]="true"></mat-divider>
+            <mat-list>
+                <mat-list-item *ngFor="let reitti of pysakki.patterns">
                     <h4 class="mat-header-cell">{{ reitti.route.shortName }}</h4>
-                    <p [class]="reitti.directionId | routeDirection">{{ reitti.directionId | routeDirection }} </p>
+                    <p [class]="reitti.directionId | routeDirection  "> <mat-icon>{{ reitti.directionId | routeDirection }}</mat-icon> </p>
                     <p class="longName">{{ reitti.route.longName }}</p>
-                </span>
-                <mat-divider></mat-divider>
-            </ul>
+                </mat-list-item>
+            </mat-list>
         </div>
         <div fxFlex>
 
@@ -24,5 +26,6 @@
         </div>
 
     </div>
+    </mat-expansion-panel>
 </article>
 </body>
