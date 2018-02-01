@@ -11,6 +11,9 @@ import {FormsModule} from '@angular/forms';
 import {TopBarComponent} from './top-bar/top-bar.component';
 import {AgmCoreModule} from '@agm/core';
 import { RouteDirectionPipe } from './pipes/route-direction.pipe';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatTabsModule} from '@angular/material';
+import {ServiceComponent} from './service/service.component';
 
 
 @NgModule({
@@ -20,13 +23,17 @@ import { RouteDirectionPipe } from './pipes/route-direction.pipe';
         SetupComponent,
         RoutesComponent,
         RouteDirectionPipe,
+        ServiceComponent,
     ],
     imports: [
         BrowserModule,
         CommonModule,
         AppRoutingModule,
         HttpClientModule,
+        FlexLayoutModule,
         FormsModule,
+        MatTabsModule,
+        ServiceComponent,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyBpjktY-18X3EvQDdzIFV3s2sgRBqRpZ9w'
         })

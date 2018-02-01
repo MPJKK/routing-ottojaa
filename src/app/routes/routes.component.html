@@ -3,14 +3,20 @@
         {{ pysakki.name }}
     </h1>
 
-    <ul>
-        <article *ngFor="let reitti of pysakki.patterns">
-            <h3>{{ reitti.route.shortName }}</h3>
-            <p [class]="reitti.directionId | routeDirection">{{ reitti.directionId | routeDirection }} </p>
-            <p class="longName">{{ reitti.route.longName }}</p>
-        </article>
-    </ul>
-    <agm-map [latitude]="pysakki.lat" [longitude]="pysakki.lon" [zoom]="15">
-        <agm-marker [latitude]="pysakki.lat" [longitude]="pysakki.lon"></agm-marker>
-    </agm-map>
+    <div fxLayout="row">
+        <div fxFlex ="30">
+            <ul>
+                <span *ngFor="let reitti of pysakki.patterns">
+                    <h1 class="mat-header-cell">{{ reitti.route.shortName }}</h1>
+                    <p [class]="reitti.directionId | routeDirection">{{ reitti.directionId | routeDirection }} </p>
+                    <p class="longName">{{ reitti.route.longName }}</p>
+                </span>
+            </ul>
+        </div>
+        <div fxFlex>
+            <agm-map [latitude]="pysakki.lat" [longitude]="pysakki.lon" [zoom]="15">
+                <agm-marker [latitude]="pysakki.lat" [longitude]="pysakki.lon"></agm-marker>
+            </agm-map>
+        </div>
+    </div>
 </article>

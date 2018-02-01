@@ -1,14 +1,15 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 .container{
   margin:auto;
   text-align: center;
+  margin-top: 30px;
 }
 .top{
-  height:50px;
-  line-height: 50px;
+  height:30px;
+  line-height: 30px;
   background-color: darkgray;
 }
 body{
   margin: 0px;
   text-align: center;
-  font-family: "Helvetica"
 }

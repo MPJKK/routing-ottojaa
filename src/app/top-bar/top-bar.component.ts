@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-top-bar',
-  templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.scss']
+    selector: 'app-top-bar',
+    templateUrl: './top-bar.component.html',
+    styleUrls: ['./top-bar.component.scss']
 })
 export class TopBarComponent implements OnInit {
 
-  constructor() { }
+    navLinks = [
+        {
+            path: '',
+            label: 'Setup',
+        },
+        {
+            path: 'routes',
+            label: 'Routes',
+        },
+    ];
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
+
+    ngOnInit() {
+    }
 
 }
