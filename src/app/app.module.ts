@@ -12,7 +12,7 @@ import {TopBarComponent} from './top-bar/top-bar.component';
 import {AgmCoreModule} from '@agm/core';
 import { RouteDirectionPipe } from './pipes/route-direction.pipe';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatTabsModule} from '@angular/material';
+import {MatDividerModule, MatTabsModule} from '@angular/material';
 import {ServiceComponent} from './service/service.component';
 
 
@@ -23,7 +23,6 @@ import {ServiceComponent} from './service/service.component';
         SetupComponent,
         RoutesComponent,
         RouteDirectionPipe,
-        ServiceComponent,
     ],
     imports: [
         BrowserModule,
@@ -33,7 +32,7 @@ import {ServiceComponent} from './service/service.component';
         FlexLayoutModule,
         FormsModule,
         MatTabsModule,
-        ServiceComponent,
+        MatDividerModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyBpjktY-18X3EvQDdzIFV3s2sgRBqRpZ9w'
         })

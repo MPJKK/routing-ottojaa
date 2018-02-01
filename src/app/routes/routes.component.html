@@ -1,22 +1,28 @@
+<body>
 <article *ngFor="let pysakki of reitit">
     <h1>
         {{ pysakki.name }}
     </h1>
 
     <div fxLayout="row">
-        <div fxFlex ="30">
+        <div fxFlex="30">
             <ul>
                 <span *ngFor="let reitti of pysakki.patterns">
-                    <h1 class="mat-header-cell">{{ reitti.route.shortName }}</h1>
+                    <mat-divider [vertical]="true"></mat-divider>
+                    <h4 class="mat-header-cell">{{ reitti.route.shortName }}</h4>
                     <p [class]="reitti.directionId | routeDirection">{{ reitti.directionId | routeDirection }} </p>
                     <p class="longName">{{ reitti.route.longName }}</p>
                 </span>
+                <mat-divider></mat-divider>
             </ul>
         </div>
         <div fxFlex>
+
             <agm-map [latitude]="pysakki.lat" [longitude]="pysakki.lon" [zoom]="15">
                 <agm-marker [latitude]="pysakki.lat" [longitude]="pysakki.lon"></agm-marker>
             </agm-map>
         </div>
+
     </div>
 </article>
+</body>

@@ -4,7 +4,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 @Injectable()
 export class DigitransitService {
   apiurl: string = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
-  pysakki = 'Kyyhkysmäki';
+  pysakki = 'Gransinmäki';
   constructor(private http: HttpClient) {
   }
 
